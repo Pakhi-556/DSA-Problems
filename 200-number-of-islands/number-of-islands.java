@@ -1,5 +1,5 @@
 class Solution {
-     int r;
+     /*int r;
      int c;
     char arr[][];
     int count;
@@ -42,5 +42,42 @@ class Solution {
          if(j+1<c && arr[i][j+1]=='1'){
             visitIsland(i,j+1);
         }
+    }*/
+  public void dfs(int r,int c,boolean[][] vis,char[][] grid){
+    int n= grid.length;
+    int m= grid[0].length;
+       vis[r][c]=true;
+       
+       int dr[]={-1,0,1,0};
+       int dc[]={0,1,0,-1};
+
+       for(int i=0;i<dr.length;i++){
+        int nr=r+dr[i];
+        int nc=c+dc[i];
+
+        while(nr>=0 && nr<n && nc>=0 && nc<m && !vis[nr][nc] && grid[nr][nc]=='1'){
+            dfs(nr,nc,vis,grid);
+        }
+       }
+  }
+
+  public int numIslands(char[][] grid){
+
+    int n= grid.length;
+    int m= grid[0].length;
+    boolean[][] vis=new boolean[n][m];
+    int count=0;
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+          if(!vis[i][j] && grid[i][j]=='1'){
+            count++;
+            dfs(i,j,vis,grid);
+          }
+        }
     }
+   return count;
+
+  } 
+
 }
