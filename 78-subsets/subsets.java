@@ -8,7 +8,7 @@ class Solution {
         
     }
 
-    private void backtracking(int[] nums,int s,List<Integer> ll, List<List<Integer>> ans){
+    public void backtracking(int[] nums,int s,List<Integer> ll, List<List<Integer>> ans){
         ans.add(new ArrayList(ll));
         for(int i=s;i<nums.length;i++){
             ll.add(nums[i]);
