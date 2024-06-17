@@ -6,7 +6,7 @@ class Solution {
 			ch[str.charAt(i)-'a']++;
 		}
 
-		Arrays.sort(ch);
+		
 
         int count=0;
         
