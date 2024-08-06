@@ -5,22 +5,15 @@ class Solution {
             char ch=word.charAt(i);
             arr[ch-'a']++;
         }
+        
 
-        Integer[] ans=new Integer[26];
-        for(int i=0;i<26;i++){
-            ans[i]=arr[i];
-        }
-
-        Arrays.sort(ans,Collections.reverseOrder());
+        Arrays.sort(arr);
 
         int totalpresses=0;
 
         for(int i=0;i<26;i++){
-            if(ans[i]==0){
-                break;
-            }
 
-            totalpresses+=(i/8+1)*ans[i];
+            totalpresses+=(i/8+1)*arr[26-i-1];
         }
 
         return totalpresses;
