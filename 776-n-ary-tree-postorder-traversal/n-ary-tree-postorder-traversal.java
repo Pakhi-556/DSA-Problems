@@ -25,7 +25,22 @@ class Solution {
             return ll;
         }
         
-        dfs(root,ll);
+        /*dfs(root,ll);
+
+        return ll;*/
+
+        Stack<Node> s=new Stack();
+        s.push(root);
+
+        while(!s.isEmpty()){
+            Node curr=s.pop();
+            ll.addFirst(curr.val);
+
+            for(int i=0;i<curr.children.size();i++){
+                s.push(curr.children.get(i));
+            }
+
+        }
 
         return ll;
     }
