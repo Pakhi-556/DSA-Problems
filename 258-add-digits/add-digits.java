@@ -12,7 +12,7 @@ class Solution {
         return sum;
     }
     public int addDigits(int num) {
-        if(num>=0 && num<10){
+        /*if(num>=0 && num<10){
             return num;
 
         }
@@ -21,9 +21,9 @@ class Solution {
             sum=helper(sum);
         }
 
-       return sum; 
+       return sum; */
 
-       /*if(num==0){
+       if(num==0){
            return 0;
        }
        else if(num%9==0){
@@ -31,7 +31,7 @@ class Solution {
        }
        else{
            return num%9;
-       }*/
+       }
         
     }
 }
