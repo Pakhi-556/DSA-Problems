@@ -9,7 +9,7 @@ class Solution {
                 ll.add("Fizz");
             }
 
-            else if(i!=0 && i%5==0){
+            else if(i!=1 && i%5==0){
                 ll.add("Buzz");
             }
             else{
