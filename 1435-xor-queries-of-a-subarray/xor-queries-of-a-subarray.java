@@ -18,9 +18,7 @@ class Solution {
             res[i]=pre[b];
            }else{
             res[i]=pre[b]^pre[a-1];
-           }
-
-           
+           }  
         }
 
         return res;
